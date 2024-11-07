@@ -1,0 +1,169 @@
+body {
+    background-color: #d6cba2;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 0.8em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    position: absolute;
+    top: 9.375em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    gap: 1.5625em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Marker Felt', sans-serif;
+}
+
+/* Responsive adjustments for iPhone 6, 7, 8 screen sizes */
+@media (max-width: 23.4375em) { 
+    .header {
+       height: 15.625em;
+       background-size: contain;
+    }
+
+    nav {
+       top: 7.5em;
+       margin-top: 0.1875em;
+    }
+
+    nav ul {
+       flex-direction: row;
+       gap: 1.6875em;
+       margin-right: 0.3125em;
+       margin-top: 0.125em;
+    }
+
+    nav a {
+       font-size: 0.75em;
+    }
+}
+
+.sidebar {
+    width: 15.625em;
+    padding: 0.5em 1.25em; 
+    background-color: #c0b285;
+    border-radius: 0.625em;
+    margin-top: 1em;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+}
+
+.onder-balk-afbeelding {
+    display: block; /* Zorgt ervoor dat de afbeelding als blok wordt weergegeven */
+    max-width: 100px; /* maximale breedte om de afbeelding kleiner te maken */
+    height: 50px;
+    margin-bottom: 10px;
+    position: absolute; /* Zorgt ervoor dat de afbeelding vrij kan bewegen over het scherm */
+    left: 50%; /* Startpositie aan de rechterkant van de pagina */
+
+    margin-left: 200px;
+    animation: bewegen 2s linear forwards;
+}
+
+@keyframes bewegen {
+    from {
+        left: 50%; /* Startpositie aan de rechterkant */
+    }
+    to {
+        left: 0; /* Eindpositie aan de linkerkant */
+    }
+}
+
+.bewegende-afbeelding {
+    position: absolute;
+    left: -100px; /* Beginpositie links buiten het zicht */
+    top: 30%;
+    transform: translateY(-50%); /* Zorgt dat de afbeelding gecentreerd wordt op de y-as */
+    max-width: 160px;
+    height: auto;
+    animation: naarMidden 3s ease-out forwards;
+}
+
+@keyframes naarMidden {
+    from {
+        left: -100px; /* Start buiten het scherm aan de linkerkant */
+    }
+    to {
+        left: 50%; /* Eindigt in het midden van de pagina */
+        transform: translate(-50%, -50%); /* Centreert de afbeelding horizontaal */
+    }
+}
+
+.bar {
+    width: 15.625em;
+    padding: 0.5em 1.25em; 
+    background-color: #c0b285;
+    border-radius: 0.625em;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.beafbeelding {
+    position: absolute;
+    left: -100px;
+    top: 30%;
+    transform: translateY(-50%);
+    max-width: 260px;
+    height: auto;
+    animation: slideIn 3s forwards; /* Start de animatie en laat deze eindigen op de eindpositie */
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100px; /* Beginpositie buiten het zicht */
+    }
+    80% {
+        left: 50%; /* Beweegt de afbeelding naar het midden */
+        transform: translate(-50%, -50%); /* Zorgt dat de afbeelding gecentreerd is */
+    }
+    100% {
+        left: 50%; /* Laat de afbeelding op de eindpositie */
+        transform: translate(-50%, -50%);
+    }
+}
+
+#map {
+    width: calc(100% - 40px); /* Zorgt ervoor dat er 20px ruimte aan beide zijden is */
+    height: 400px;
+    border: none;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsieve instellingen voor kleinere schermen */
+@media screen and (max-width: 767px) {
+    #map {
+        height: 250px;
+        width: calc(100% - 30px); /* Verlaagt de zijkantenpadding voor kleinere schermen */
+        margin: 15px auto;
+    }
+}
+
+
