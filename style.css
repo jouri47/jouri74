@@ -138,7 +138,7 @@ main {
         left: -100px; /* Beginpositie buiten het zicht */
     }
     80% {
-        left: 50%; /* Beweegt de afbeelding naar het midden */
+        left: 50%;
         transform: translate(-50%, -50%); /* Zorgt dat de afbeelding gecentreerd is */
     }
     100% {
